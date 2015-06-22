@@ -329,7 +329,7 @@ static float delay = 0;
   
   NSUInteger location = [filePath rangeOfString:[NSString stringWithFormat:@"/%@.js", fileName]].location;
   if (location > 0) {
-    fileDir = [NSString stringWithFormat:@"%@/www/jxcore/",[filePath substringToIndex:location]];
+    fileDir = [NSString stringWithFormat:@"%@/JS/jxcore/",[filePath substringToIndex:location]];
   }
   
   if (error) {
@@ -631,7 +631,7 @@ static float delay = 0;
 + (void) callEventCallback:(NSString*)eventName_ withParams:(NSArray*)params_ isJSON:(BOOL) is_json {
   if (useThreading && [NSThread currentThread] != jxcoreThread) {
     NativeCall *nc = [[NativeCall alloc] init];
-    [nc setName:eventName_ withParams:params_ isJSON:FALSE];
+    [nc setName:eventName_ withParams:params_ isJSON:is_json];
     
     [JXcore run:^{
       assert([nativeCallsQueue count] !=0 && "Native calls queue shouldn't be empty");
