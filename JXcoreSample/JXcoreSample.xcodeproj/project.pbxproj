@@ -14,6 +14,7 @@
 		9F7CA4BD1B37274C00C96770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7CA4BC1B37274C00C96770 /* Images.xcassets */; };
 		9F7CA4C01B37274C00C96770 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7CA4BE1B37274C00C96770 /* LaunchScreen.xib */; };
 		9F7CA4CC1B37274C00C96770 /* JXcoreSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CA4CB1B37274C00C96770 /* JXcoreSampleTests.m */; };
+		9F8695391B38473C003BB456 /* JXcore in Resources */ = {isa = PBXBuildFile; fileRef = 9F8695381B38473C003BB456 /* JXcore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		9F7CA4C51B37274C00C96770 /* JXcoreSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JXcoreSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7CA4CA1B37274C00C96770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7CA4CB1B37274C00C96770 /* JXcoreSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXcoreSampleTests.m; sourceTree = "<group>"; };
+		9F8695381B38473C003BB456 /* JXcore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JXcore; path = "/Users/Gonzo/Github/jxcore-ios-sample/JXcoreSample/JXcore"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		9F7CA4A31B37274C00C96770 = {
 			isa = PBXGroup;
 			children = (
+				9F8695381B38473C003BB456 /* JXcore */,
 				9F7CA4AE1B37274C00C96770 /* JXcoreSample */,
 				9F7CA4C81B37274C00C96770 /* JXcoreSampleTests */,
 				9F7CA4AD1B37274C00C96770 /* Products */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7CA4BB1B37274C00C96770 /* Main.storyboard in Resources */,
+				9F8695391B38473C003BB456 /* JXcore in Resources */,
 				9F7CA4C01B37274C00C96770 /* LaunchScreen.xib in Resources */,
 				9F7CA4BD1B37274C00C96770 /* Images.xcassets in Resources */,
 			);
@@ -418,6 +422,7 @@
 				9F7CA4D11B37274C00C96770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7CA4D21B37274C00C96770 /* Build configuration list for PBXNativeTarget "JXcoreSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +431,7 @@
 				9F7CA4D41B37274C00C96770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
