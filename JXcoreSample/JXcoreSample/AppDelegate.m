@@ -1,9 +1,6 @@
 //
-//  AppDelegate.m
-//  JXcoreSample
-//
-//  Created by Gonzo on 6/21/15.
-//  Copyright (c) 2015 Nubisa. All rights reserved.
+//  Licensed under MIT
+//  Copyright (c) 2015 Oguz Bastemur. All rights reserved.
 //
 
 #import "AppDelegate.h"
