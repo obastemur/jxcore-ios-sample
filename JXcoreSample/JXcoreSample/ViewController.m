@@ -29,20 +29,26 @@ static bool initialized = false;
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
   
+  
+  // do not initialize JXcore twice
   if (initialized) return;
   initialized = true;
   
-  NSLog(@"JXcore Cordova plugin initializing");
-  
+  // makes JXcore instance running under it's own thread
   [JXcore useSubThreading];
-  [JXcore startEngine:@"JS/main" withCallback:callback namedAs:@"  _callback_  "];
   
+  // start engine (main file will be JS/main.js. This is the initializer file)
+  [JXcore startEngine:@"JS/main"];
+  
+  // Define ScreenBrightness method to JS side so we can call it from there (see app.js)
   [JXcore addNativeBlock:^(NSArray *params, NSString *callbackId) {
     CGFloat br = [[UIScreen mainScreen] brightness];
     
     [JXcore callEventCallback:callbackId withJSON:[NSString stringWithFormat:@"%f", (float)br]];
   } withName:@"ScreenBrightness"];
   
+  
+  // Second native method for JS side
   [JXcore addNativeBlock:^(NSArray *params, NSString *callbackId) {
     if (params == nil || [params count] == 0)
     {
@@ -69,6 +75,8 @@ static bool initialized = false;
     });
   } withName:@"SetIPAddress"];
   
+  
+  // Start the application (app.js)
   NSArray *params = [NSArray arrayWithObjects:@"app.js", nil];
   [JXcore callEventCallback:@"StartApplication" withParams:params];
 }

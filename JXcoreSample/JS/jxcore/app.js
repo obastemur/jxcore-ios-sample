@@ -1,9 +1,12 @@
+// Call a native method 'ScreenBrightness'
 Mobile('ScreenBrightness').call(function(br){
   console.log("Screen Brightness", br);
 });
 
 
 var base_html = "Update TextBox on Mobile application to change this message";
+
+// Register UpdateHTML method so we can call it from native side
 Mobile('UpdateHTML').register(function(html){
   base_html = html;
   
@@ -21,12 +24,16 @@ for (var o in nis) {
   var interfaces = nis[o];
   
   for(var o in interfaces) {
-    if (interfaces[o].family == "IPv4" && interfaces[o].address != "127.0.0.1") {
+    if (interfaces[o].family == "IPv4" && interfaces[o].address != "127.0.0.1"
+              && interfaces[o].address.length) {
       arrIP.push(interfaces[o].address);
     }
   }
 }
 
+// calling a native method but
+// we don't know the number of arguments
+// Use function.apply
 var ipset = Mobile('SetIPAddress');
 ipset.call.apply(ipset, arrIP);
 

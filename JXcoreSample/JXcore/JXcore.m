@@ -291,7 +291,7 @@ static float delay = 0;
   useThreading = true;
 }
 
-+ (void)startEngine:(NSString*)fileName withCallback:(JXcoreNative)jxCallback namedAs:(NSString*)name
++ (void)startEngine:(NSString*)fileName
 {
   assert(jxcoreThread == nil && "You can start JXcore engine only once");
   
@@ -312,21 +312,19 @@ static float delay = 0;
     [jxcoreThread start];
     
     [JXcore run:^(){
-      [JXcore initialize:fileName withCallback:jxCallback namedAs:name];
+      [JXcore initialize:fileName];
     }];
   } else {
-    [JXcore initialize:fileName withCallback:jxCallback namedAs:name];
+    [JXcore initialize:fileName];
   }
 }
 
-+ (void)initialize:(NSString*)fileName withCallback:(JXcoreNative)jxCallback  namedAs:(NSString*)name {
++ (void)initialize:(NSString*)fileName {
   NSLog(@"JXcore instance initializing");
   NSString *sandboxPath = NSHomeDirectory();
 
   NSString *filePath =
       [[NSBundle mainBundle] pathForResource:fileName ofType:@"js"];
-
-  [JXcore addNativeMethod:jxCallback withName:name];
   
   NSError *error;
   NSString *fileContents_ =

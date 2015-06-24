@@ -68,12 +68,8 @@
 		9F8695471B384D18003BB456 /* libsnappy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsnappy.a; sourceTree = "<group>"; };
 		9F8695481B384D18003BB456 /* libsqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsqlite3.a; sourceTree = "<group>"; };
 		9F8695491B384D18003BB456 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
-		9F86954A1B384D18003BB456 /* CDVJXcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVJXcore.h; sourceTree = "<group>"; };
-		9F86954B1B384D18003BB456 /* CDVJXcore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVJXcore.m; sourceTree = "<group>"; };
 		9F86954C1B384D18003BB456 /* JXcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXcore.h; sourceTree = "<group>"; };
 		9F86954D1B384D18003BB456 /* JXcore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXcore.m; sourceTree = "<group>"; };
-		9F86954E1B384D18003BB456 /* JXcoreExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXcoreExtension.h; sourceTree = "<group>"; };
-		9F86954F1B384D18003BB456 /* JXcoreExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXcoreExtension.m; sourceTree = "<group>"; };
 		9F86955E1B384D41003BB456 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9F8695601B384D49003BB456 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		9F86956F1B386DBD003BB456 /* JS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JS; sourceTree = "<group>"; };
@@ -178,12 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				9F86953C1B384D18003BB456 /* bin */,
-				9F86954A1B384D18003BB456 /* CDVJXcore.h */,
-				9F86954B1B384D18003BB456 /* CDVJXcore.m */,
 				9F86954C1B384D18003BB456 /* JXcore.h */,
 				9F86954D1B384D18003BB456 /* JXcore.m */,
-				9F86954E1B384D18003BB456 /* JXcoreExtension.h */,
-				9F86954F1B384D18003BB456 /* JXcoreExtension.m */,
 			);
 			path = JXcore;
 			sourceTree = "<group>";

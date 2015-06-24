@@ -33,7 +33,7 @@ typedef void (*JXcoreNative)(NSArray *params, NSString *callbackId);
 
 @interface JXcore : NSObject
 {}
-+ (void)startEngine:(NSString*)fileName withCallback:(JXcoreNative)jxCallback namedAs:(NSString*)name;
++ (void)startEngine:(NSString*)fileName;
 
 + (void)addNativeMethod:(JXcoreNative)nativeMethod withName:(NSString*)name;
 

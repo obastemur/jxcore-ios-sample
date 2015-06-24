@@ -31,17 +31,6 @@ function callJXcoreNative(name, args) {
   process.natives.callJXcoreNative.apply(null, arr);
 }
 
-function MakeCallback(callbackId) {
-  this.cid = callbackId;
-
-  var _this = this;
-  this.callback = function () {
-    callJXcoreNative("  _callback_  ", [Array.prototype.slice.call(arguments, 0),
-      null,
-      _this.cid]);
-  };
-}
-
 function WrapFunction(cb, fnc) {
   this.fnc = fnc;
   this.cb = cb;
@@ -107,46 +96,6 @@ JXmobile.prototype.register = function (target) {
 };
 
 global.Mobile = JXmobile;
-
-JXmobile.executeJSON = function (json, callbackId) {
-  if (!json.methodName) return; // try throw exception
-
-  var internal = internal_methods[json.methodName];
-  var fnc = jx_methods[json.methodName];
-
-  if (internal) {
-    var cb = new MakeCallback(callbackId).callback
-    json.params.push(cb);
-    internal.apply(null, json.params);
-    return;
-  } else if (fnc) {
-    if (!fnc.is_synced) {
-      if (!json.params || (json.params.length == 1 && json.params[0] === null)) {
-        json.params = [];
-      }
-      json.params[json.params.length] = new MakeCallback(callbackId).callback;
-    }
-
-    var ret_val = fnc.method.apply(null, json.params);
-    if (fnc.is_synced && callbackId) {
-      new MakeCallback(callbackId).callback(ret_val);
-    } else {
-      return ret_val;
-    }
-    return;
-  } else if (json.methodName && json.methodName.length>3 && json.methodName.substr(0,3) === "RC-") {
-    var cb = new MakeCallback(callbackId).callback
-    json.params.push(cb);
-    fnc = ui_methods[json.methodName.substr(3)];
-    if (fnc && fnc.returnCallback) {
-      fnc.returnCallback.apply(null, json.params);
-      delete ui_methods[json.methodName.substr(3)];
-      return;
-    }
-  }
-
-  console.error("JXcore: Method Doesn't Exist [", json.methodName, "] Did you register it?");
-};
 
 console.warn("Platform", process.platform);
 console.warn("Process ARCH", process.arch);
