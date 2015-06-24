@@ -37,7 +37,7 @@
 			containerPortal = 9F7CA4A41B37274C00C96770 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9F7CA4AB1B37274C00C96770;
-			remoteInfo = JXcoreSample;
+			remoteInfo = JXcoreHTTPServer;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -224,7 +224,7 @@
 			dependencies = (
 			);
 			name = JXcoreHTTPServer;
-			productName = JXcoreSample;
+			productName = JXcoreHTTPServer;
 			productReference = 9F7CA4AC1B37274C00C96770 /* JXcoreHTTPServer.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -479,7 +479,7 @@
 				INFOPLIST_FILE = JXcoreSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = JXcoreHTTPServerTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JXcoreSample.app/JXcoreSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JXcoreHTTPServer.app/JXcoreHTTPServer";
 			};
 			name = Debug;
 		};
@@ -494,7 +494,7 @@
 				INFOPLIST_FILE = JXcoreSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = JXcoreHTTPServerTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JXcoreSample.app/JXcoreSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JXcoreHTTPServer.app/JXcoreHTTPServer";
 			};
 			name = Release;
 		};
